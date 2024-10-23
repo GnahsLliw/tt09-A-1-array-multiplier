@@ -9,11 +9,11 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+This project uses a 4x4 Array Multiplier to multiplies two four-bit numbers together, using a series of full adders to result in an 8 bit product.
 
 ## How to test
 
-Explain how to use your project
+See if outcome is correct from the two four-bit numbers by manually checking.
 
 ## External hardware
 
