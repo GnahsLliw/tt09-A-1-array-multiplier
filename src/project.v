@@ -27,3 +27,33 @@ module tt_um_array_mult_structural_GnahsLliw (
   wire _unused = &{ena, clk, rst_n, 1'b0};
 
 endmodule
+module full_adder(
+    input a,
+    input b,
+    input c,
+    output y,
+    output z
+    );
+    
+// Internal Signals
+    wire int_sig1;
+    wire int_sig2;
+    wire int_sig3;
+    wire int_sig4;
+    wire int_sig5;
+    wire int_sig6;
+    wire int_sig7;
+    wire int_sig8;
+        
+    assign int_sig1 = a & ~b;
+    assign int_sig2 = ~a & b;
+    assign int_sig3 = int_sig1 + int_sig2;
+    assign int_sig4 = int_sig3 & ~c;
+    assign int_sig5 = ~int_sig3 & c;
+    assign y = int_sig4 + int_sig5; 
+    assign int_sig6 = a & b;
+    assign int_sig7 = b & c;
+    assign int_sig8 = c & a;    
+    assign z = int_sig6 | int_sig7 | int_sig8;
+     
+endmodule
