@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module tt_um_Array_Mult_Structural_GnahsLliw(
+module tt_um_array_mult_structural_GnahsLliw(
     input [3:0] m,
     input [3:0] q,
     output wire [7:0] p
