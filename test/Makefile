@@ -1,11 +1,11 @@
-# Makefile
+t# Makefile
 # See https://docs.cocotb.org/en/stable/quickstart.html for more info
 
 # defaults
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = array_mult_structural.v
+PROJECT_SOURCES = project.v
 
 ifneq ($(GATES),yes)
 
