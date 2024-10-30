@@ -13,7 +13,11 @@ This project uses a 4x4 Array Multiplier to multiplies two four-bit numbers toge
 
 ## How to test
 
-See if outcome is correct from the two four-bit numbers by manually checking.
-
+Input two 4-bit binary numbers and manually verify the output.
+For example:
+1st num: 1001
+2nd num: 1011
+Output: 1100011 (binary), or 0x63 (hexadecimal)
+The format of the output can be adjusted in test.py, but the value they represent should be accurate to the product of the two 4-bit binary numbers.
 ## External hardware
 N/A
