@@ -11,48 +11,67 @@ You can also include images in this folder and reference them in the markdown. E
 
 This project uses a 4x4 Array Multiplier to multiplies two four-bit numbers together, using a series of full adders to result in an 8 bit product. The multiplier works by systematically multiplying each bit of the first number with each bit of the second number. These partial products are then combined using a series of full adders to form the final result.
 ```mermaid
-graph TD
+graph TB
   %% Inputs
-  A(A0,A1,A2,A3) --> P00(P0,0)
-  A(A0,A1,A2,A3) --> P01(P0,1)
-  A(A0,A1,A2,A3) --> P02(P0,2)
-  A(A0,A1,A2,A3) --> P03(P0,3)
+  A(A3, A2, A1, A0) --> P00(AND A3*B0)
+  A --> P01(AND A2*B0)
+  A --> P02(AND A1*B0)
+  A --> P03(AND A0*B0)
 
-  B(B0,B1,B2,B3) --> P10(P1,0)
-  B(B0,B1,B2,B3) --> P11(P1,1)
-  B(B0,B1,B2,B3) --> P12(P1,2)
-  B(B0,B1,B2,B3) --> P13(P1,3)
+  A --> P10(AND A3*B1)
+  A --> P11(AND A2*B1)
+  A --> P12(AND A1*B1)
+  A --> P13(AND A0*B1)
 
-  %% Partial Products
-  P00 --> FA0(Full Adder)
-  P10 --> FA0
-  FA0 --> Sum0(Sum 0)
-  FA0 --> Carry0(Carry 0)
-  
-  P01 --> FA1(Full Adder)
-  P11 --> FA1
-  FA1 --> Sum1(Sum 1)
-  FA1 --> Carry1(Carry 1)
-  
-  P02 --> FA2(Full Adder)
-  P12 --> FA2
-  FA2 --> Sum2(Sum 2)
-  FA2 --> Carry2(Carry 2)
-  
-  P03 --> FA3(Full Adder)
-  P13 --> FA3
-  FA3 --> Sum3(Sum 3)
-  FA3 --> Carry3(Carry 3)
+  A --> P20(AND A3*B2)
+  A --> P21(AND A2*B2)
+  A --> P22(AND A1*B2)
+  A --> P23(AND A0*B2)
 
-  %% Outputs
-  Sum0 --> Product0(Product Bit 0)
-  Sum1 --> Product1(Product Bit 1)
-  Sum2 --> Product2(Product Bit 2)
-  Sum3 --> Product3(Product Bit 3)
-  Carry0 --> Product4(Product Bit 4)
-  Carry1 --> Product5(Product Bit 5)
-  Carry2 --> Product6(Product Bit 6)
-  Carry3 --> Product7(Product Bit 7)
+  A --> P30(AND A3*B3)
+  A --> P31(AND A2*B3)
+  A --> P32(AND A1*B3)
+  A --> P33(AND A0*B3)
+
+  %% Full Adders
+  P00 --> FA00(Full Adder)
+  P10 --> FA01
+  P01 --> FA02
+  P11 --> FA03
+  FA00 --> Sum0(Sum 0)
+
+  P02 --> FA10(Full Adder)
+  P12 --> FA11
+  P03 --> FA12
+  P13 --> FA13
+  FA10 --> Sum1(Sum 1)
+
+  P20 --> FA20(Full Adder)
+  P30 --> FA21
+  P21 --> FA22
+  P31 --> FA23
+  FA20 --> Sum2(Sum 2)
+
+  P22 --> FA30(Full Adder)
+  P32 --> FA31
+  P23 --> FA32
+  P33 --> FA33
+  FA30 --> Sum3(Sum 3)
+
+  %% Output connections
+  Sum0 --> P0(Product Bit 0)
+  Sum1 --> P1(Product Bit 1)
+  Sum2 --> P2(Product Bit 2)
+  Sum3 --> P3(Product Bit 3)
+  FA00 --> Carry0(Carry 0)
+  FA10 --> Carry1(Carry 1)
+  FA20 --> Carry2(Carry 2)
+  FA30 --> Carry3(Carry 3)
+  Carry0 --> P4(Product Bit 4)
+  Carry1 --> P5(Product Bit 5)
+  Carry2 --> P6(Product Bit 6)
+  Carry3 --> P7(Product Bit 7)
+
 
 ```
 
