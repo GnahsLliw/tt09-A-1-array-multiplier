@@ -13,20 +13,21 @@ This project uses a 4x4 Array Multiplier to multiplies two four-bit numbers toge
 ```mermaid
 graph TD
   %% Layer 1: Partial Product Generation using AND Gates
-  A0B0[AND A0 B0] --> S00
-  A0B1[AND A0 B1] --> FA01
-  A0B2[AND A0 B2] --> FA02
-  A0B3[AND A0 B3] --> FA03
+  Q0M0[AND Q0 M0] --> P0
+  Q0M1[AND Q0 M1] --> FA01
+  Q0M2[AND Q0 M2] --> FA02
+  Q0M3[AND Q0 M3] --> FA03
 
-  A1B0[AND A1 B0] --> FA10
-  A1B1[AND A1 B1] --> FA11
-  A1B2[AND A1 B2] --> FA12
-  A1B3[AND A1 B3] --> FA13
+  Q1M0[AND Q1 M0] --> FA01
+  Q1M1[AND Q1 M1] --> FA02
+  Q1M2[AND Q1 M2] --> FA03
+  Q1M3[AND Q1 M3] --> FA04
+  0 --> FA01 --> FA02 --> FA03 --> FA04
 
-  A2B0[AND A2 B0] --> FA20
-  A2B1[AND A2 B1] --> FA21
-  A2B2[AND A2 B2] --> FA22
-  A2B3[AND A2 B3] --> FA23
+  Q2M0[AND Q2 M0] --> FA05
+  Q2M1[AND Q2 M1] --> FA06
+  Q2M2[AND Q2 M2] --> FA07
+  Q2M3[AND Q2 M3] --> FA08 
 
   A3B0[AND A3 B0] --> FA30
   A3B1[AND A3 B1] --> FA31
