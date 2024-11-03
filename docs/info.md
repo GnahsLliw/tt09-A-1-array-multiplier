@@ -13,7 +13,7 @@ This project uses a 4x4 Array Multiplier to multiplies two four-bit numbers toge
 
 <img width="512" alt="4x4-array-multiplier" src="https://github.com/user-attachments/assets/afa3d1a1-7a04-4db6-930c-e615a4c772f9">
 
-            Figure 1: 4x4 Array Multiplier
+            
 
 ## How to test
 
