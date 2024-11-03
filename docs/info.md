@@ -29,31 +29,7 @@ graph TD
   Q2M2[AND Q2 M2] --> FA07
   Q2M3[AND Q2 M3] --> FA08 
 
-  A3B0[AND A3 B0] --> FA30
-  A3B1[AND A3 B1] --> FA31
-  A3B2[AND A3 B2] --> FA32
-  A3B3[AND A3 B3] --> FA33
-
-  %% Layer 2: First Row of Additions
-  S00 --> FA10
-  FA01 --> FA11
-  FA02 --> FA12
-  FA03 --> FA13
-
-  %% Layer 3: Second Row of Additions
-  FA10 --> FA20
-  FA11 --> FA21
-  FA12 --> FA22
-  FA13 --> FA23
-
-  %% Layer 4: Third Row of Additions
-  FA20 --> FA30
-  FA21 --> FA31
-  FA22 --> FA32
-  FA23 --> FA33
-
-  %% Output Connections
-  FA33 --> Result
+  
 
 ```
 
