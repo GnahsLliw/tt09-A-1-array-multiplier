@@ -12,7 +12,9 @@ You can also include images in this folder and reference them in the markdown. E
 This project uses a 4x4 Array Multiplier to multiplies two four-bit numbers together, using a series of full adders to result in an 8 bit product (figure 1). The multiplier works by systematically multiplying each bit of the first number with each bit of the second number. These partial products are then combined using a series of full adders to form the final result.
 
 <img width="512" alt="4x4-array-multiplier" src="https://github.com/user-attachments/assets/afa3d1a1-7a04-4db6-930c-e615a4c772f9">
-Figure 1: 4x4 Array Multiplier
+
+        Figure 1: 4x4 Array Multiplier
+
 ## How to test
 
 Input two 4-bit binary numbers and manually verify the output.
